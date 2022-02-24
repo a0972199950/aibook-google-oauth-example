@@ -73,7 +73,7 @@ app.get('/cookie/google/refresh', async (req, res) => {
      */
     const access_token = 'new access token'
 
-    // TODO: 把 access token, refresh token, 以及其對應的 cognito user id 存到 database
+    // TODO: 把 access token, 以及其對應的 cognito user id 存到 database
 
     // 回傳 access token 給前端並同時將 access token 寫入 cookie
     res
