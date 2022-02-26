@@ -217,10 +217,10 @@ app.get('/auth/google/access-token', async (req, res) => {
 })
 
 // 所有和 google 相簿相關聯的端點。這邊只舉一個 put 當例子
-app.put('/project/{projectId}/google-album', (req, res) => {
+app.put('/project/{projectId}/google-album', async (req, res) => {
   const userId = 'userId'
 
-  new Promise((resolve, reject) => {
+  await new Promise((resolve, reject) => {
     // Google access token 從原本的 req.query，改成由 database 取得
     const googleAuthAccessToken = 'accessToken'
 
